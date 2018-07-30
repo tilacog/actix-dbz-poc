@@ -52,7 +52,7 @@ impl Handler<RaiseKi> for ZFighter {
     type Result = <RaiseKi as Message>::Result;
     fn handle(&mut self, _msg: RaiseKi, _: &mut Context<Self>) -> Self::Result {
         self.ki += 1_000;
-        println!("{} raised it's ki to {}", self.name, self.ki);
+        println!("{} raised its ki to {}", self.name, self.ki);
 
         // send message to the probe/scouter actor with the new power level
         tokio::spawn(
